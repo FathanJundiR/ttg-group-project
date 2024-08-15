@@ -14,7 +14,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0",
+    "react-simple-typewriter": "^5.0.1",
     "socket.io-client": "^4.7.5",
+    "swiper": "^11.1.9",
     "toastify-js": "^1.12.0"
   },
   "devDependencies": {
@@ -29,7 +31,7 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.10",
+    "tailwindcss": "^3.4.9",
     "vite": "^5.4.0"
   }
 }
