@@ -9,7 +9,6 @@ export default function HomePage() {
   const [isFirstTypingComplete, setIsFirstTypingComplete] = useState(false);
   const [secondTyping, setSecondTyping] = useState(false);
   const [thirdTyping, setThirdTyping] = useState(false);
-  const [isTypingDone, setTypingDone] = useState(false);
 
   useEffect(() => {
     if (!isFirstTypingComplete) {
@@ -46,16 +45,6 @@ export default function HomePage() {
     }
   }, [thirdTyping]);
 
-  useEffect(() => {
-    if (thirdTyping) {
-      // Duration calculation: (text length / type speed) * 1000 + additional delay
-      const typingDuration = 6000; // Example: (text length / type speed) + delay
-      const timer = setTimeout(() => {
-        setTypingDone(true);
-      }, typingDuration);
-      return () => clearTimeout(timer);
-    }
-  }, [thirdTyping,isTypingDone]);
 
   return (
     <>
@@ -66,7 +55,7 @@ export default function HomePage() {
         </div>
         {intro && (
           <div className="hehe fixed inset-0 bg-slate-black bg-opacity-70 backdrop-blur-md flex z-20 flex items-center justify-center">
-
+            <button className="text-black" onClick={()=>{setIntro(false)}}> X </button>
             <div className="w-[60vw] h-[80vh] flex">
               <div className="w-[30%] h-full flex items-end">
                 <img
@@ -122,8 +111,7 @@ export default function HomePage() {
                         delaySpeed={2000}
                       />
                     )}
-                  </p>
-                  {isTypingDone && (
+                  </p>                 
                     <div className="w-full flex justify-end h-[15%]">
                       <button
                         className="w-[30%] h-[90%] border border-3 border-slate-700 rounded-2xl mt-1 text-slate-800"
@@ -133,8 +121,7 @@ export default function HomePage() {
                       >
                         Start Playing
                       </button>
-                    </div>
-                  )}
+                    </div>      
                 </div>
               </div>
             </div>

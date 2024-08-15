@@ -21,7 +21,7 @@ export default function NavigationBar(){
                 <img className="h-full w-[35%] object-cover ml-4" src={logo} />
             </div>
             <div className="w-[40%] h-full flex items-center justify-center gap-10">
-            <div className="text-[20px] text-slate-200">Home</div>
+            <div className="text-[20px] text-slate-200 cursor-pointer" onClick={()=>{navigate('/')}}>Home</div>
                 <div className="text-[20px] text-slate-200">Services</div>
                 <div className="text-[20px] text-slate-200">About Us</div>
             </div>

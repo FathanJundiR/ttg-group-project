@@ -1,10 +1,8 @@
 import { useState } from "react";
 import burger from "../assets/burger.gif"
 
-export default function GamePage() {
-    const [reveal , setReveal] = useState(false)
-    const [reveal1 , setReveal1] = useState(false)
-
+export default function GamePage(){
+  
   return (
     <>
       <div className="w-full h-screen bg-slate white flex justify-center fixed">
@@ -15,13 +13,6 @@ export default function GamePage() {
             <div className="w-full h-[80%] relative bg-slate-500 overflow-hidden">
   <img className="absolute inset-0 w-full h-full object-contain z-10" src={burger} alt="Burger" />
   <div className="absolute inset-0 w-full h-full bg-slate-200 bg-opacity-20 z-20 grid grid-cols-3 grid-rows-3 gap-0">
-    {/* {!reveal1 && (
-  <div className="bg-slate-400 border border-black" onClick={()=>{setReveal1(true)}}></div>
-)} */}
- {/* {reveal1 && (
-  <div className="bg-slate-400 border border-black" onClick={()=>{setReveal1(true)}}></div>
-)} */}
- 
   <div className="border border-black">
     <div className="bg-slate-300 w-full h-full"  onClick={(e) => (e.target.style.display = 'none')}> </div>
   </div>
@@ -50,18 +41,6 @@ export default function GamePage() {
     <div className="bg-slate-300 w-full h-full" onClick={(e) => (e.target.style.display = 'none')}> </div>
   </div>
  
-  
-
- 
-
-  {/* <div className="bg-slate-400  border border-black"></div>
-  <div className="bg-slate-400  border border-black"></div>
-  <div className="bg-slate-400 border border-black"></div>
-  <div className="bg-slate-400 border border-black"></div>
-  <div className="bg-slate-400 border border-black"></div>
-  <div className="bg-slate-400 border border-black"></div>
-  <div className="bg-slate-400 border border-black"></div>
-  <div className="bg-slate-400 border border-black"></div> */}
 </div>
 </div>
 
